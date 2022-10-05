@@ -95,4 +95,44 @@ console.log(longString.split(" ").length);
 // Count word "et"
 console.log(longString.split("et").length);
 
+// Bonus 2
+// check if it is a palindrom
+// with more loops and less fancy functions and methods 
+
+let word = "Amor, Roma";
+let arg = [];
+
+for (let index = 0; index < word.length; index += 1)
+{
+    if(word[index] != "." && word[index] != "?" && word[index] != "," && word[index] != " " 
+    && word[index] != "!")
+    {
+    arg.push(word[index].toUpperCase());
+    }
+}
+
+let check = false;
+for (let index = 0; index < arg.length; index +=1)
+{
+    if (arg[index] === arg[(arg.length-1) - index])
+    {
+        check = true;
+    }
+    else
+    {
+        check = false;
+        break;
+    }
+}
+
+if (check)
+{
+    console.log("It is a palindrom :-)");
+}
+else
+{
+    console.log("It is NOT a palindrom :-(");
+}
+
+
 
